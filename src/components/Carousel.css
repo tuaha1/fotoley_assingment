@@ -1,0 +1,29 @@
+.carousel_content {
+    display: flex;
+}
+
+.carousel {
+    display: flex;
+    width: 80%;
+    padding: 0px 2%;
+}
+
+.carousel_image {
+    width: 15%;
+    padding: 10px;
+    border-radius: 35px;
+}
+
+
+@media (max-width: 768px) {
+
+    .carousel_content {
+        display: inline-block;
+    }
+
+    .carousel_image {
+        padding: 1%;
+        border-radius: 10px;
+    }
+
+}

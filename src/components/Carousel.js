@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
+import "./Carousel.css"
 
 function Carousel(props) {
 
@@ -67,20 +68,20 @@ function Carousel(props) {
 
     return (
 
-        <div style={{ display: 'flex' }}>
+        <div className='carousel_content'>
 
-            <div style={{ display: "flex", width: "80%", padding: '0px 2%' }}>
-                <button onClick={onLeftClick}>←</button>
+            <div className='carousel'>
+                <button style={{ backgroundColor: 'black', color: 'white', borderRadius: '30px', padding: '20px' }} onClick={onLeftClick}>←</button>
                 {props.imageList.map((img, index) => {
-                    return <img key={index} onClick={() => { onClickHandler(index) }} style={{ width: '15%', padding: '10px', borderRadius: '35px', filter: visibleIndex != index && "grayscale(100%)" }} src={img.image}></img>
+                    return <img alt='img' key={index} onClick={() => { onClickHandler(index) }} className='carousel_image' style={{ filter: visibleIndex != index && "grayscale(100%)" }} src={img.image}></img>
                 })}
-                <button onClick={onRightClick}>→</button>
+                <button style={{ backgroundColor: 'black', color: 'white', borderRadius: '30px', padding: '20px' }} onClick={onRightClick}>→</button>
             </div >
 
             <div>
                 {carousel ?
-                    <img onClick={startCarousel} width="200px" src='https://media.istockphoto.com/id/890158078/vector/pause-button-vector.jpg?s=612x612&w=0&k=20&c=ga1wXjrJsE6gtTuF5xTMutftETwmmUzUzR6hHXBNpRI='></img>
-                    : <img onClick={startCarousel} width="200px" src='https://png.pngitem.com/pimgs/s/4-42332_button-clip-art-play-pause-button-png-transparent.png'></img>
+                    <img onClick={startCarousel} width="200px" src='https://media.istockphoto.com/id/890158078/vector/pause-button-vector.jpg?s=612x612&w=0&k=20&c=ga1wXjrJsE6gtTuF5xTMutftETwmmUzUzR6hHXBNpRI=' alt='img'></img>
+                    : <img onClick={startCarousel} width="200px" src='https://png.pngitem.com/pimgs/s/4-42332_button-clip-art-play-pause-button-png-transparent.png' alt='img'></img>
                 }
             </div>
 
