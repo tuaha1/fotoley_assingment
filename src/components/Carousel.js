@@ -71,14 +71,14 @@ function Carousel(props) {
         <div className='carousel_content'>
 
             <div className='carousel'>
-                <button style={{ backgroundColor: 'black', color: 'white', borderRadius: '30px', padding: '20px' }} onClick={onLeftClick}>←</button>
+                <button style={{ border: 'solid 2px grey', backgroundColor: 'black', color: 'white', borderRadius: '30px', padding: '20px' }} onClick={onLeftClick}>←</button>
                 {props.imageList.map((img, index) => {
                     return <img alt='img' key={index} onClick={() => { onClickHandler(index) }} className='carousel_image' style={{ filter: visibleIndex != index && "grayscale(100%)" }} src={img.image}></img>
                 })}
-                <button style={{ backgroundColor: 'black', color: 'white', borderRadius: '30px', padding: '20px' }} onClick={onRightClick}>→</button>
+                <button style={{ border: 'solid 2px grey', backgroundColor: 'black', color: 'white', borderRadius: '30px', padding: '20px' }} onClick={onRightClick}>→</button>
             </div >
 
-            <div>
+            <div style={{ textAlign: 'center' }}>
                 {carousel ?
                     <img onClick={startCarousel} width="200px" src='https://media.istockphoto.com/id/890158078/vector/pause-button-vector.jpg?s=612x612&w=0&k=20&c=ga1wXjrJsE6gtTuF5xTMutftETwmmUzUzR6hHXBNpRI=' alt='img'></img>
                     : <img onClick={startCarousel} width="200px" src='https://png.pngitem.com/pimgs/s/4-42332_button-clip-art-play-pause-button-png-transparent.png' alt='img'></img>
