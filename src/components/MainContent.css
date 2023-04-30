@@ -1,0 +1,16 @@
+.content_container {
+    display: flex;
+    padding: 2%;
+}
+
+.content_text {
+    padding: 0px 2%;
+}
+
+@media (max-width: 768px) {
+
+    /* Styles to apply for screens up to 768px wide */
+    .content_container {
+        display: block;
+    }
+}
