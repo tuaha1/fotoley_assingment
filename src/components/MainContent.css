@@ -13,4 +13,10 @@
     .content_container {
         display: block;
     }
+
+    .content_container img {
+        width: 100%;
+        height: auto;
+    }
+
 }
